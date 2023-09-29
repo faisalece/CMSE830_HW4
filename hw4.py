@@ -10,8 +10,9 @@ st.subheader('Developed by Md Arifuzzaman Faisal')
 
 # List of dataset filenames
 data = "water_potability.csv"
+dataset_name = "Water Potability"
 df = pd.read_csv(data)
-st.header(f'Name of the dataset : {data}')
+st.header(f'Name of the dataset : {dataset_name}')
 
 # Add an image
 st.image("dw.jpg", caption="Your Image Caption", use_column_width=True)
