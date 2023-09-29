@@ -7,9 +7,10 @@ import matplotlib.pyplot as plt
 
 # dataset
 st.header('Application : HW 4 (CMSE 830)')
+st.subheader('Developed by Md Arifuzzaman Faisal')
 
 # List of dataset filenames
-data = ["water_potability.csv", "stroke-data.csv", "Life_Expectancy.csv"]
+data = ["water_potability.csv"]
 
 # User selects a dataset
 selected_dataset = st.selectbox('Select a dataset for EDA analysis', data)
