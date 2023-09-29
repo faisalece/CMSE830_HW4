@@ -23,32 +23,6 @@ st.write("Displaying the head (first 5 rows) of the dataset :")
 st.write(df.head())  # Display the DataFrame
 
 st.write("Displaying the statistics of the dataset :")  # Display the DataFrame
-
-# Custom styled table using HTML and CSS
-st.markdown("""
-<style>
-    table {
-        font-family: Arial, sans-serif;
-        border-collapse: collapse;
-        width: 100%;
-    }
-
-    th, td {
-        border: 1px solid #dddddd;
-        text-align: left;
-        padding: 8px;
-    }
-
-    th {
-        background-color: #f2f2f2;
-    }
-
-    tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
-</style>
-""", unsafe_allow_html=True)
-
 st.write(df.describe())
 
 # Select only numeric column 
@@ -78,8 +52,8 @@ st.pyplot(plot)
 # Regression plot
 st.subheader("Regression Plot")
 plt.figure(figsize=(10, 6))
-x_column = st.selectbox('Select x column for plotting', df_new.columns)
-y_column = st.selectbox('Select y column for plotting', df_new.columns)
+x_column = st.selectbox('Select x column for plotting', df_new.columns, index=df_new.columns.get_loc('Solids'))
+y_column = st.selectbox('Select y column for plotting', df_new.columns, index=df_new.columns.get_loc('Sulfate'))
 plt.title(f'Regplot of {x_column} vs {y_column} with Lowess Smoother')
 fig = sns.regplot(data=df_new, x=x_column, y=y_column, lowess=True, scatter_kws={'color': 'blue'}, line_kws={'color': 'red'})
 reg_fig = plt.gcf()  # Get the current figure
