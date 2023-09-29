@@ -38,7 +38,6 @@ if selected_dataset:
         {'selector': 'tbody', 'props': 'font-size: 16px;'},
         {'selector': 'td', 'props': 'padding: 8px;'}
     ]))
-    st.write(df.describe())  # Display the statistics
     
     # Select only numeric coloumn 
     df_new = df.select_dtypes(include=['int64', 'float64'])
