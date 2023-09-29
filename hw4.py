@@ -15,7 +15,7 @@ df = pd.read_csv(data)
 st.header(f'Name of the dataset : {dataset_name}')
 
 # Add an image
-st.image("dw.jpg", caption="Your Image Caption", use_column_width=True)
+st.image("dw.jpg", caption="Is the water safe for drink?", use_column_width=True)
           
 st.write("Displaying the head (first 5 rows) of the dataset :")
 st.write(df.head())  # Display the DataFrame
