@@ -96,18 +96,3 @@ if not hide_KDE:
         fig.delaxes(axes[i])
     plt.tight_layout()
     st.pyplot(fig)
-
-# Histograms plots
-hide_histogram = st.checkbox("Hide Histogram")
-if not hide_histogram:
-    fig, axes = plt.subplots(n_rows, n_cols, figsize=(12, 8))
-    axes = axes.flatten()
-    for i, column in enumerate(df_new):
-        ax = axes[i]
-        df[column].plot.hist(ax=ax, bins=10, color='red', edgecolor='black')
-        ax.set_title(f'Histogram for {column}')
-    for i in range(num_columns, n_rows * n_cols):
-        fig.delaxes(axes[i])
-    plt.tight_layout()
-    plt.suptitle(f'{df_name}', y=1.03)    
-    st.pyplot(fig)
