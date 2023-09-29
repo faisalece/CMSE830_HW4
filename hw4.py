@@ -16,6 +16,9 @@ st.header(f'Name of the dataset : {dataset_name}')
 
 # Add an image
 st.image("dw.jpg", caption="Is the water safe for drink?", use_column_width=True)
+
+message = "Context: Access to safe drinking-water is essential to health, a basic human right and a component of effective policy for health protection. This is important as a health and development issue at a national, regional and local level. In some regions, it has been shown that investments in water supply and sanitation can yield a net economic benefit, since the reductions in adverse health effects and health care costs outweigh the costs of undertaking the interventions."
+st.write(message)
           
 st.write("Displaying the head (first 5 rows) of the dataset :")
 st.write(df.head())  # Display the DataFrame
