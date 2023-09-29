@@ -10,24 +10,12 @@ st.header('Application : HW 4 (CMSE 830)')
 st.subheader('Developed by Md Arifuzzaman Faisal')
 
 # List of dataset filenames
-data = ["water_potability.csv"]
+data = "water_potability.csv"
+df = pd.read_csv(data)
 
-# User selects a dataset
-selected_dataset = st.selectbox('Select a dataset for EDA analysis', data)
-
-# Load the selected dataset into a DataFrame
-if selected_dataset:
-    df = pd.read_csv(selected_dataset)
-    if selected_dataset == "water_potability.csv":
-        df_name = "Water Quality Dataset"
-    elif selected_dataset == "stroke-data.csv":
-        df_name = "Stroke Prediction Dataset"
-    elif selected_dataset == "Life_Expectancy.csv":
-        df_name = "Life Expectancy (WHO) Dataset"
-    else:
-        df_name = "Dataset not selected"
-        
     st.header(f'Name of the dataset : {df_name}')
+# Add an image
+st.image("dw.jpg", caption="Your Image Caption", use_column_width=True)
           
     st.write("Displaying the head (first 5 rows) of the dataset :")
     st.write(df.head())  # Display the DataFrame
