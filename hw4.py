@@ -32,6 +32,12 @@ if selected_dataset:
     st.write("Displaying the head (first 5 rows) of the dataset :")
     st.write(df.head())  # Display the DataFrame
     st.write("Displaying the statistics of the dataset :")  # Display the DataFrame
+    # Display the statistics with custom style
+    st.write(df.describe().set_table_styles([
+        {'selector': 'thead', 'props': 'background-color: #428bca; color: #ffffff;'},
+        {'selector': 'tbody', 'props': 'font-size: 16px;'},
+        {'selector': 'td', 'props': 'padding: 8px;'}
+    ]))
     st.write(df.describe())  # Display the statistics
     
     # Select only numeric coloumn 
