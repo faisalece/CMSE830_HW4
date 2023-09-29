@@ -66,6 +66,13 @@ if not hide_corr:
     heatmap_fig = plt.gcf()  # Get the current figure
     st.pyplot(heatmap_fig)
 
+attribute1="Solids"
+attribute2="Sulfate"
+plot = sns.jointplot(data=df_new, x=attribute1, y=attribute2, hue="diagnosis")
+# Display the plot in Streamlit
+st.pyplot(plot)
+
+
 # Regression plot
 st.subheader("Regression Plot")
 plt.figure(figsize=(10, 6))
