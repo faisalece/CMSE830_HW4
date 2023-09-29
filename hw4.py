@@ -68,7 +68,7 @@ if not hide_corr:
 
 attribute1="Solids"
 attribute2="Sulfate"
-plot = sns.jointplot(data=df_new, x=attribute1, y=attribute2, hue="diagnosis")
+plot = sns.jointplot(data=df_new, x=attribute1, y=attribute2, hue="Potability")
 # Display the plot in Streamlit
 st.pyplot(plot)
 
